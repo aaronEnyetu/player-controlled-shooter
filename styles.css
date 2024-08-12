@@ -43,3 +43,12 @@ body {
     font-size: 24px;
     font-family: Arial, sans-serif;
 }
+
+#levelBoard {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+}
