@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #000;
+}
+
+#gameCanvas {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.player {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: #0f0;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.bullet {
+    position: absolute;
+    width: 5px;
+    height: 20px;
+    background: #f00;
+}
+
+.enemy {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: #f00;
+}
