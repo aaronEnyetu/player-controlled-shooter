@@ -52,3 +52,158 @@ body {
     font-size: 24px;
     font-family: Arial, sans-serif;
 }
+
+
+
+
+.enemy {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+}
+
+.basic {
+    background: #f00;
+}
+
+.fast {
+    background: #0f0;
+    animation: fastEnemyMove 2s linear infinite;
+}
+
+@keyframes fastEnemyMove {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(100vh);
+    }
+}
+
+.shooting {
+    background: #00f;
+}
+
+.bullet {
+    position: absolute;
+    width: 5px;
+    height: 20px;
+    background: #f00;
+}
+
+.enemyBullet {
+    position: absolute;
+    width: 5px;
+    height: 20px;
+    background: #ff0;
+}
+
+
+
+#gameOverMessage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 30px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+#navbar {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+#navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+#navbar li {
+    margin: 0 15px;
+}
+
+#navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#navbar a:hover {
+    text-decoration: underline;
+}
+
+#game {
+    padding-top: 60px; /* Offset for the fixed navbar */
+}
+
+#gameCanvas {
+    position: relative;
+    width: 100vw;
+    height: 80vh;
+    background-color: #000;
+}
+
+#player {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #0f0;
+    bottom: 10px;
+    left: calc(50% - 25px);
+}
+
+#scoreBoard {
+    color: #fff;
+    text-align: center;
+    font-size: 24px;
+    margin-top:100px;
+}
+
+#about, #credits {
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #f4f4f4;
+}
+
+#about h2, #credits h2 {
+    margin-top: 0;
+}
+
+#about p, #credits p {
+    margin: 0;
+}
+
+
+
+
+#startGame h1 {
+    margin-bottom: 20px;
+}
+
+#startButton {
+    padding:10px 20px;
+    font-size: 18px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#startButton:hover {
+    background-color: #45a049;
+}
