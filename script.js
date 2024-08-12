@@ -1,12 +1,16 @@
 const canvas = document.getElementById('gameCanvas');
-const player = document.createElement('div');
-player.className = 'player';
-canvas.appendChild(player);
+const player = document.getElementById('player');
+const scoreBoard = document.getElementById('scoreBoard');
 
 let playerX = window.innerWidth / 2 - 25;
 let bullets = [];
 let enemies = [];
 let score = 0;
+
+function updateScore(newScore) {
+    score = newScore;
+    scoreBoard.textContent = 'Score: ' + score;
+}
 
 function spawnEnemy() {
     const enemy = document.createElement('div');
@@ -25,7 +29,7 @@ function moveEnemies() {
         } else {
             canvas.removeChild(enemy);
             enemies.splice(index, 1);
-            score -= 10;
+            updateScore(score - 10);
         }
     });
 }
@@ -58,7 +62,7 @@ function checkCollisions() {
                 canvas.removeChild(enemy);
                 bullets.splice(bulletIndex, 1);
                 enemies.splice(enemyIndex, 1);
-                score += 10;
+                updateScore(score + 10);
             }
         });
     });
